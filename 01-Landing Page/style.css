@@ -1,0 +1,266 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container-fluid a:hover {
+    color: rgb(96, 218, 9);
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+.specification-column {
+    flex: 1;
+    max-width: 400px;
+    padding: 10px;
+}
+
+.carousel-column {
+    flex: 2;
+    max-width: 600px;
+    height: 100%;
+    margin: 10px;
+}
+
+.carousel-image {
+    width: 100%;
+    height: auto;
+}
+
+.accessories-column {
+    flex: 1;
+    max-width: 280px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.accessories {
+    margin-bottom: 10px;
+}
+
+.nav-link:hover {
+    border-bottom: 1px solid rgb(96, 218, 9);
+}
+
+.circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 0px;
+}
+
+.circle p {
+    margin-top: 10px;
+}
+
+.trending {
+    max-height: 370px;
+    margin-top: 50px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: 1s ease-in;
+    background-color: rgb(61, 59, 59);
+}
+
+.trending:hover{
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.roww {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.roww .trending-image {
+    max-width: 100px;
+    margin-right: 10px;
+}
+
+.roww-text {
+    flex: 1;
+    color: #fff;
+}
+
+.box {
+    transition: 1s ease;
+}
+
+.feature:hover {
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.card {
+    background-color: rgb(61, 59, 59);
+}
+
+.card-title {
+    color: rgb(96, 218, 9);
+}
+
+.card-text {
+    max-height: 90px;
+    overflow-y: auto;
+}
+
+.card-text p {
+    color: white;
+}
+
+.card-text::-webkit-scrollbar {
+    width: 12px;
+}
+
+.card-text::-webkit-scrollbar-track {
+    background-color: black;
+}
+
+.card-text::-webkit-scrollbar-thumb {
+    background-color: rgb(96, 218, 9);
+}
+
+.my-table th:nth-child(1) {
+    color: rgb(96, 218, 9);
+    background-color: rgb(61, 59, 59);
+}
+
+.my-table td:nth-child(1) {
+    color: white;
+    background-color: rgb(61, 59, 59);
+}
+
+.my-table td:nth-child(2) {
+    color: white;
+    background-color: rgb(61, 59, 59);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.gallery-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(61, 59, 59);
+    transition: 1s ease;
+}
+
+.gallery-image {
+    width: calc(33.33% - 20px);
+    margin: 10px;
+}
+
+.gallery-image:hover{
+    transform: scale(1.2);
+    z-index: 2;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.my-4 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.fw-bold {
+    font-weight: bold;
+}
+
+.footer {
+    background-color: rgb(33, 33, 33);
+    padding: 10px;
+}
+
+.footer .col-md-4 span {
+    font-size: 15px;
+    color: rgb(177, 175, 175);
+}
+
+.footer .col-md-4 span a {
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.footer .col-md-4 span a:hover {
+    color: rgb(96, 218, 9);
+    border-bottom: 1px solid rgb(96, 218, 9);
+}
+
+footer a {
+    color: #ffffff;
+    margin-right: 10px;
+}
+
+footer a:hover {
+    color: rgb(96, 218, 9);
+    border-bottom: 1px solid rgb(96, 218, 9);
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .specification-column,
+    .carousel-column,
+    .accessories-column {
+        flex: 1;
+        max-width: 100%;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .row img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .gallery-image {
+        width: 100%;
+    }
+}

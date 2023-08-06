@@ -1,0 +1,701 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sufiyan Ansari | CodSoft Internship</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="color: rgb(96, 218, 9);">Kawasaki</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#specification">Specification</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <!-- Button trigger Login modal -->
+                <button type="button" class="btn btn-success m-2 my-sm-0" data-bs-toggle="modal"
+                    data-bs-target="#loginModal">
+                    Login
+                </button>
+                <!-- Button trigger SignUp modal -->
+                <button type="button" class="btn btn-success my-sm-0" data-bs-toggle="modal"
+                    data-bs-target="#signupModal">
+                    Signup
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!--Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="loginModalTitle">Kawasaki User Login:</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="loginusername" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="loginusername" name="loginusername"
+                                placeholder="Enter Your Username" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="pass" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="loginpass" name="loginpass"
+                                placeholder="Enter Your Password" required>
+                        </div>
+                        <button type="submit" class="btn btn-dark">Submit</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--SignUp Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="signupModal">Kawasaki User Registration:</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="username" name="username"
+                                placeholder="Enter Your Username" onkeypress="return(event.charCode != 32)" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="pass1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="pass1" name="pass1"
+                                placeholder="Enter Your Password" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="pass2" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="pass2" name="pass2"
+                                placeholder="Enter Your Password Again" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="checkbox" onclick="show()" class="check mx-2">Show Password
+                        </div>
+                        <button type="submit" class="btn btn-dark">Submit</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="container text-center my-4" id="home" style="margin-top: 4.5rem!important;">
+        <h1 class="fw-bold"><b>Home</b></h1>
+        <hr>
+    </div>
+    <div class="content border bg-body-tertiary rounded-3">
+        <div class="specification-column">
+            <img src="assets/h2r.png" alt="" width="100px" height="100px">
+            <h5 class="fw-bold">2021</h5>
+            <!-- <h2 class="fw-bold my-3">Ninja H2R</h2> -->
+            <div class="price my-4">
+                <small class="text-body-secondary">Starting At</small>
+                <h5 class="blog-post-meta fw-bold" style="margin-bottom: 0px;">Rs: 79,90,000</h5>
+                <small class="text-body-secondary">(Ex. Showroom)</small>
+            </div>
+            <div class="button my-4">
+                <button class="btn btn-success" type="button">Get On-Road Price</button>
+            </div>
+            <p>*Product pictures shown are for illustration purpose only.</p>
+            <p>*Actual product may vary from the picture shown here.</p>
+            <p>*Specification and pricing are subject to change.</p>
+            <p>*Please check with the dealer for the latest information.</p>
+            <p>*Terms and conditions apply.</p>
+        </div>
+
+        <div class="carousel-column my-4">
+            <div id="imagegallery" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#imagegallery" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#imagegallery" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#imagegallery" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#imagegallery" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                  </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/H2R/4.jpg" class="carousel-image" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/H2R/1.jpg" class="carousel-image" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/H2R/5.jpg" class="carousel-image" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/H2R/6.jpg" class="carousel-image" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#imagegallery" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#imagegallery" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+            </div>
+            <div class="price-section my-2">
+                <div class="col-lg-12">
+                    <div class="table-responsive">
+                        <table class="table table-bordered my-table">
+                            <tr align="center">
+                                <th colspan="2">
+                                    Ninja H2R On-Road Price Break-Up
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Ex-Showroom Price
+                                </td>
+                                <td>
+                                    Rs. 79.90 Lakh
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    RTO + Road Tax + Others
+                                </td>
+                                <td>
+                                    Rs. 7.19 Lakh
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Insurance
+                                </td>
+                                <td>
+                                    Rs. 1.5 Lakh
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Final on Road Price
+                                </td>
+                                <td style="font-size: 20px;">
+                                    <b>Rs. 88.59 Lakh</b>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accessories-column">
+            <h4>Available Colors</h4>
+            <hr>
+            <div class="color">
+                <div class="col-md-4">
+                    <div class="circle">
+                        <img src="assets/H2R/color.png" alt="Circular Image">
+                    </div>
+                </div>
+                <p>Mirror Coated Matte Spark Black</p>
+            </div>
+            <div class="col-lg-12 trending">
+                <h4 class="my-2 text-center" style="color: rgb(96, 218, 9);">Trending Bikes</h4>
+                <hr style="color: rgb(255, 255, 255);" >
+                <div class="roww">
+                    <img src="https://media.zigcdn.com/media/model/2022/Sep/ninja-zx-10r-right-side-view_135x90.jpg" class="trending-image" alt="Image 1">
+                    <div class="roww-text">
+                        <b>Ninja ZX-10R</b><br>
+                        Rs. 15.99 Lakh
+                    </div>
+                </div>
+                <div class="roww">
+                    <img src="https://media.zigcdn.com/media/model/2020/Sep/2021-kawasaki-z-900-right-side-view_135x90.jpg" class="trending-image" alt="Image 2">
+                    <div class="roww-text">
+                        <b>Z900</b><br>
+                        Rs. 9.11 Lakh
+                    </div>
+                </div>
+                <div class="roww">
+                    <img src="https://media.zigcdn.com/media/model/2023/Jun/kawasaki-right-side-view_135x90.jpg" class="trending-image" alt="Image 3">
+                    <div class="roww-text">
+                        <b>Ninja 300</b><br>
+                        Rs. 3.43 Lakh
+                    </div>
+                </div>
+                <div class="roww">
+                    <img src="https://media.zigcdn.com/media/model/2022/Jun/kawasaki-ninja-400-right-side-view_135x90.jpg" class="trending-image" alt="Image 1">
+                    <div class="roww-text">
+                        <b>Ninja 400</b><br>
+                        Rs. 5.19 Lakh
+                    </div>
+                </div>
+                <div class="roww">
+                    <img src="https://media.zigcdn.com/media/model/2021/Nov/kawasaki-ninja-1000-sx-right-side-view_135x90.jpg" class="trending-image" alt="Image 1">
+                    <div class="roww-text">
+                        <b>Ninja 1000SX</b><br>
+                        Rs. 12.20 Lakh
+                    </div>
+                </div>
+                <div class="roww">
+                    <img src="https://media.zigcdn.com/media/model/2023/Mar/kawasaki-emiminator-400-right-side-view_135x90.jpg" class="trending-image" alt="Image 1">
+                    <div class="roww-text">
+                        <b>Eliminator 400</b><br>
+                        Rs. 5.00 Lakh
+                    </div>
+                </div>
+                <div class="roww">
+                    <img src="https://media.zigcdn.com/media/model/2022/Nov/kawasaki-ninja-hev-right-side-view_135x90.jpg" class="trending-image" alt="Image 1">
+                    <div class="roww-text">
+                        <b>Ninja HEV</b><br>
+                        Rs. 8.00 Lakh
+                    </div>
+                </div>
+                <div class="roww">
+                    <img src="https://media.zigcdn.com/media/model/2019/Sep/z400-right-side-view_135x90.jpg" class="trending-image" alt="Image 1">
+                    <div class="roww-text">
+                        <b>Z400</b><br>
+                        Rs. 4.00 Lakh
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features -->
+    <div class="content my-4" id="features">
+        <div class="container text-center my-4">
+            <h1 class="fw-bold"><b>Top Features</b></h1>
+            <hr>
+        </div>
+        <div class="container my-4 box">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 feature">
+                    <div class="card mb-3" style="max-width: 600px;">
+                        <div class="row g-0">
+                            <div class="col-md-4 d-flex justify-content-center">
+                                <img src="https://www.kawasaki-india.com/wp-content/uploads/2017/12/th_17ZX1000Y_201GY3FSAA00D_C.jpg" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Brembo Brakes</h5>
+                                    <hr style="color: rgb(96, 218, 9);" >
+                                    <div class="card-text">
+                                        <p>
+                                            A pair of massive ø330 mm Brembo semi-floating discs with a thickness of t5.5 mm deliver superb braking force.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 feature">
+                    <div class="card mb-3" style="max-width: 600px;">
+                        <div class="row g-0">
+                            <div class="col-md-4 d-flex justify-content-center">
+                                <img src="https://www.kawasaki-india.com/wp-content/uploads/2017/12/th_17ZX1000Y_201GY3FSAD00D_C.jpg" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Single-sided Swingarm</h5>
+                                    <hr style="color: rgb(96, 218, 9);" >
+                                    <div class="card-text">
+                                        <p>
+                                            Having a single-sided swingarm allows the exhaust silencer to be mounted closer to the bike centreline, ensuring a high bank angle for sporty cornering.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 feature">
+                    <div class="card mb-3" style="max-width: 600px;">
+                        <div class="row g-0">
+                            <div class="col-md-4 d-flex justify-content-center">
+                                <img src="https://www.kawasaki-india.com/wp-content/uploads/2017/12/th_17ZX1000Y_201GY3FSE00D_C-1.jpg" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Riding Position & Ergonomics</h5>
+                                    <hr style="color: rgb(96, 218, 9);" >
+                                    <div class="card-text">
+                                        <p>
+                                            The riding position was designed for riding at ultra-high speed and circuit riding. To help support the rider during intense acceleration, hipsupporting pads flank the rear of the seat. The hip support is adjustable 15 mm backward to suit rider size.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 feature">
+                    <div class="card mb-3" style="max-width: 600px;">
+                        <div class="row g-0">
+                            <div class="col-md-4 d-flex justify-content-center">
+                                <img src="https://www.kawasaki-india.com/wp-content/uploads/2017/12/th_15ZX1000P_CG_Oil_Jet_001.jpg" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Oil Jets</h5>
+                                    <hr style="color: rgb(96, 218, 9);" >
+                                    <div class="card-text">
+                                        <p>
+                                            In the interest of keeping the engine compact and simple, a single lubrication system provides cooling oil for the engine components, supercharger and transmission.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 feature">
+                    <div class="card mb-3" style="max-width: 600px;">
+                        <div class="row g-0">
+                            <div class="col-md-4 d-flex justify-content-center">
+                                <img src="https://www.kawasaki-india.com/wp-content/uploads/2017/12/th_15ZX1000P_40SGRYFEGG00D_C.jpg" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Electronic Throttle Valves</h5>
+                                    <hr style="color: rgb(96, 218, 9);" >
+                                    <div class="card-text">
+                                        <p>
+                                            Kawasaki’s fully electronic throttle actuation system enables the ECU to control the volume of both the fuel (via fuel injectors) and the air (via throttle valves) delivered to the engine. Ideal fuel injection and throttle valve position results in smooth, natural engine response and the ideal engine output. The system also makes a significant contribution to reduced emissions
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 feature">
+                    <div class="card mb-3" style="max-width: 600px;">
+                        <div class="row g-0">
+                            <div class="col-md-4 d-flex justify-content-center">
+                                <img src="https://www.kawasaki-india.com/wp-content/uploads/2017/12/th_17ZX1000Y_201GY3FCWE00D_C-1.jpg" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Kawasaki Original Paint</h5>
+                                    <hr style="color: rgb(96, 218, 9);" >
+                                    <div class="card-text">
+                                        <p>
+                                            Kawasaki’s new Highly Durable paint features a special coat that allows scratches to repair themselves, enabling the paint to maintain its high-quality finish†. * Soft and hard segments in the coat work together like a chemical spring, creating a trampoline effect that absorbs impacts. † Notes: 1. In some cases, it takes about one week for recovery. 2. The paint will not recover in the case of scratches caused by a coin or key, or zip fasteners.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Specifications -->
+    <div class="content" id="specification">
+        <div class="container text-center my-4">
+            <h1 class="fw-bold"><b>Specifications</b></h1>
+            <hr>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="table-responsive">
+                        <table class="table table-bordered my-table">
+                            <tr align="center">
+                                <th colspan="2">
+                                    ENGINE & TRANSMISSION
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    TYPE
+                                </td>
+                                <td>
+                                    Liquid-cooled, 4-stroke In-Line Four with Supercharger
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    DISPLACEMENT
+                                </td>
+                                <td>
+                                    998 cc
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    BORE AND STROKE
+                                </td>
+                                <td>
+                                    76.0 mm x 55.0 mm
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    COMPRESSION RATIO
+                                </td>
+                                <td>
+                                    8.3:1
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    MAXIMUM POWER
+                                </td>
+                                <td>
+                                    228.0 kW {310 PS} / 14,000 rpm998 cc
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="table-responsive">
+                        <table class="table table-bordered my-table">
+                            <tr align="center">
+                                <th colspan="2">
+                                    DIMENSIONS & CHASSIS
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    FRAME TYPE
+                                </td>
+                                <td>
+                                    120/600 R17
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    TYRE - REAR
+                                </td>
+                                <td>
+                                    190/650 R17
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    WHEELBASE
+                                </td>
+                                <td>
+                                    1,450 mm
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    GROUND CLEARANCE
+                                </td>
+                                <td>
+                                    130 mm
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    SEAT HEIGHT
+                                </td>
+                                <td>
+                                    830 mm
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="table-responsive">
+                        <table class="table table-bordered my-table">
+                            <tr align="center">
+                                <th colspan="2">
+                                    BRAKES & SUSPENSION
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    FRONT / WHEEL TRAVEL
+                                </td>
+                                <td>
+                                    Ø 43 mm inverted fork with rebound and compression damping, spring preload adjustability and top-out springs / 120 mm
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    REAR / WHEEL TRAVEL
+                                </td>
+                                <td>
+                                    New Uni-Trak, Öhlins TTX36 gas-charged shock with piggyback reservoir, compression and rebound damping, spring preload adjustability and top-out spring / 135 mm
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    BRAKE - FRONT
+                                </td>
+                                <td>
+                                    Dual Semi-Floating 330 mm Brembo Discs
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    CALIPER - FRONT
+                                </td>
+                                <td>
+                                    Dual Radial-Mount, Brembo M50 Monobloc Opposed 4-Piston
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    BRAKE - REAR
+                                </td>
+                                <td>
+                                    Single 250 mm Disc
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Gallery -->
+    <div class="gallery-container" style="margin-bottom: 4.5rem!important;">
+        <div class="container text-center my-4">
+            <h1 class="fw-bold"><b>Gallery</b></h1>
+            <hr>
+        </div>
+        <div class="gallery">
+            <img data-bs-toggle="modal" data-bs-target="#image1" src="assets/H2R/1.jpg" class="gallery-image" alt="Image 1">
+            <img data-bs-toggle="modal" data-bs-target="#image2" src="assets/H2R/2.jpg" class="gallery-image" alt="Image 2">
+            <img data-bs-toggle="modal" data-bs-target="#image3" src="assets/H2R/3.jpg" class="gallery-image" alt="Image 3">
+            <img data-bs-toggle="modal" data-bs-target="#image4" src="assets/H2R/4.jpg" class="gallery-image" alt="Image 4">
+            <img data-bs-toggle="modal" data-bs-target="#image5" src="assets/H2R/5.jpg" class="gallery-image" alt="Image 5">
+            <img data-bs-toggle="modal" data-bs-target="#image6" src="assets/H2R/6.jpg" class="gallery-image" alt="Image 6">
+            <!-- Add more images here -->
+        </div>
+    </div>
+
+    <!-- Image Modal -->
+    <div class="modal fade" id="image1" tabindex="-5" aria-labelledby="image1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <img src="assets/H2R/1.jpg" alt="Image 1">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="image2" tabindex="-5" aria-labelledby="image2" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <img src="assets/H2R/2.jpg" alt="Image 1">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="image3" tabindex="-5" aria-labelledby="image3" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <img src="assets/H2R/3.jpg" alt="Image 1">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="image4" tabindex="-5" aria-labelledby="image4" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <img src="assets/H2R/4.jpg" alt="Image 1">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="image5" tabindex="-5" aria-labelledby="image5" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <img src="assets/H2R/5.jpg" alt="Image 1">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="image6" tabindex="-5" aria-labelledby="image6" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <img src="assets/H2R/6.jpg" alt="Image 1">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer fixed-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center text-md-left mb-3 mb-md-0">
+                    <span>&copy; 2023 INDIA KAWASAKI MOTORS PVT. LTD.</span>
+                </div>
+                <div class="col-md-4 text-center mb-3 mb-md-0">
+                    <span>DISCLAIMER | PRIVACY POLICY</span>
+                </div>
+                <div class="col-md-4 text-center text-md-right">
+                    <a href="https://www.instagram.com/sufiyan_ansari_99/" target="_blank"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100092276871309" target="_blank"><i class="bi bi-facebook"></i></a>
+                    <a href="https://github.com/Sufiyan75" target="_blank"><i class="bi bi-github"></i></a>
+                    <a href="https://www.linkedin.com/in/sufiyanansari09/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
